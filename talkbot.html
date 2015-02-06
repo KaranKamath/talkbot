@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="talkbot.js"></script>
+    <script type="text/javascript" src="sampleData.js"></script>
+    <link href="talkbot.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div>
+    <div class="header">
+        <h1>TalkBot</h1>
+        <h3>Generate upto 2500 characters or 250 words</h3>
+        <h4>Sample: The Adventures of Tom Sawyer (Chp I - Chp XI)</h4>
+    </div>
+    <form name="talkbotForm">
+        <textarea id="inputString" placeholder="Enter Sample Text Here..."></textarea>
+        <label for="order">Order:</label>
+        <input id="order" type="number" min="1" max="15" value="10"/>
+        <label for="modelParam">Parameter</label>
+        <select id="modelParam">
+            <option value="Character">Character</option>
+            <option value="Word">Word</option>
+        </select>
+        <button type="button" onClick="onTalkbotSubmit()">Generate</button>
+    </form>
+    <p class="output" id="talkbotOutput"></p>
+</div>
+</body>
+</html>
